@@ -1,0 +1,12 @@
+[
+	{
+		"title": "notebook1",
+		"path": "/some/random/path",
+		"key": "mypreetylittlekey"
+	},
+	{
+		"title": "notebook2",
+		"path": "/some/other/path",
+		"key": "mypreetylittlekey2"
+	}
+]

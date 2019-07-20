@@ -1,25 +1,38 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Columns, Column, Box } from 'bloomer';
+import  MyMenu from './MyMenu.js'
+import  SlateEditor from './Editor2.js'
+import  QuillEditor from './Editor3.js'
+//import RichTextEditor from './Editor.js'
+
+var notebooks = require( './data.json' )
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+		<Box>
+			<div className="App">
+				<Columns >
+					<Column isSize="narrow" isMobile >
+						<div className="NotebookList">
+							<MyMenu title='Notebooks' data={notebooks}> </MyMenu>
+						</div>
+					</Column>
+					<Column isSize="narrow" isMobile >
+						<div className="EntriesList">
+							<MyMenu title='Entries' data={notebooks}> </MyMenu>
+						</div>
+					</Column>
+					<Column >
+		{/*
+			<RichTextEditor ></RichTextEditor>
+		*/}
+			<QuillEditor></QuillEditor>
+					</Column>
+				</Columns>
+			</div>
+		</Box>
   );
 }
 
