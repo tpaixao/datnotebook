@@ -2,7 +2,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css';
-import { Modal, ModalBackground, ModalContent, ModalClose, Button, Menu, MenuLabel, MenuList, MenuLink } from 'bloomer';
+import {   Button, Menu, MenuLabel, MenuList, MenuLink } from 'bloomer';
+import {Modal, ModalBackground,ModalCard, ModalContent, ModalClose, ModalCardBody, ModalCardHeader, ModalCardFooter , ModalCardTitle, Delete} from 'bloomer';
+import {Field, Label, Control, Input } from 'bloomer';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state){
@@ -59,10 +61,26 @@ class NotebookList extends React.Component{
 				</Menu>
 				<Modal isActive={showNewNotebookModal}>
 					<ModalBackground />
-					<ModalContent>
-						{/* Any other Bulma elements you want */}
-						<p>this is a modal</p>
-					</ModalContent>
+					<ModalCard>
+							<ModalCardHeader>
+									<ModalCardTitle>New Notebook</ModalCardTitle>
+									<Delete onClick={this.closeNewNotebookModal}/>
+							</ModalCardHeader>
+							<ModalCardBody>
+									{/* Your Content  */}
+								<Field>
+										<Label>Notebook Title</Label>
+										<Control>
+												<Input type="text" placeholder='new notebook title' />
+										</Control>
+								</Field>
+
+							</ModalCardBody>
+							<ModalCardFooter>
+									<Button isColor='danger' isPulled='left'>Cancel</Button>
+									<Button isColor='success' isPulled='right'>Save</Button>
+							</ModalCardFooter>
+					</ModalCard>
 					<ModalClose onClick={this.closeNewNotebookModal} />
 				</Modal>	
 			</div>
