@@ -15,16 +15,14 @@ class MyMenu extends React.Component{
 			<Menu>
 				<MenuLabel>{this.state.title}</MenuLabel>
 					<MenuList>
-			{ elements.map((value,index) => {
-				return <li><MenuLink>{value.title}</MenuLink></li>
-				})
-			}
+					{ elements.map((value,index) => {
+						return <li><MenuLink>{value.title}</MenuLink></li>
+						})
+					}
 					</MenuList>
 			</Menu>
-		)
+	)
 	};
-
-
 }
 
 export default MyMenu;

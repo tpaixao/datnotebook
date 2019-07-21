@@ -3,11 +3,13 @@ import React from 'react';
 import './App.css';
 import { Columns, Column, Box } from 'bloomer';
 import  MyMenu from './MyMenu.js'
+import  NotebookList from './NotebookList.js'
+import  EntryList from './EntryList.js'
 //import  SlateEditor from './Editor2.js'
 import  QuillEditor from './Editor3.js'
 //import RichTextEditor from './Editor.js'
 
-var notebooks = require( '../data.json' )
+//var notebooks = require( '../data.json' )
 
 function App() {
   return (
@@ -16,12 +18,12 @@ function App() {
 				<Columns >
 					<Column isSize="narrow" isMobile >
 						<div className="NotebookList">
-							<MyMenu title='Notebooks' data={notebooks}> </MyMenu>
+							<NotebookList title='Notebooks'> </NotebookList>
 						</div>
 					</Column>
 					<Column isSize="narrow" isMobile >
 						<div className="EntriesList">
-							<MyMenu title='Entries' data={notebooks}> </MyMenu>
+							<EntryList title='Entries'> </EntryList>
 						</div>
 					</Column>
 					<Column >
