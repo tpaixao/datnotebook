@@ -23,18 +23,11 @@ class QuillEditor extends React.Component {
 
   render() {
 			const mode = this.props.mode;
-			if ( mode==='EDIT' ){
 				return (
 					<ReactQuill value={this.props.text}
-					onChange={this.handleChange} />
+						onChange={this.handleChange}
+						readOnly={this.props.mode}/>
 				) 
-			}else if (mode==='VIEW'){
-				return (
-					<p>
-					{ this.props.text }
-					</p>
-				)
-			};
   }
 };
 
