@@ -5,14 +5,12 @@ import 'bulma/css/bulma.css';
 import { Menu, MenuLabel, MenuList, MenuLink } from 'bloomer';
 import { connect } from 'react-redux';
 
-
 function mapStateToProps(state){
 	return {
 		notebooks: state.notebooks,
 		selectedNotebook: state.selectedNotebook
 	}
 }; 
-
 
 class NotebookList extends React.Component{
 	//constructor(props){
@@ -47,7 +45,6 @@ class NotebookList extends React.Component{
 		)
 	};
 };
-
 
 //export default NotebookList;
 export default connect(mapStateToProps)( NotebookList );

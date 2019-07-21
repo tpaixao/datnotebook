@@ -1,7 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import { Columns, Column, Box } from 'bloomer';
+import { Icon, Columns, Column, Box, Container } from 'bloomer';
 import  MyMenu from './MyMenu.js'
 import  NotebookList from './NotebookList.js'
 import  EntryList from './EntryList.js'
@@ -13,28 +13,31 @@ import  QuillEditor from './Editor3.js'
 
 function App() {
   return (
-		<Box>
-			<div className="App">
-				<Columns >
+		<div className="App">
+			<Container>
+				<div>
+<Icon isSize="medium" className="fa fa-home fa-2x" />
+				</div>
+				<Columns>
 					<Column isSize="narrow" isMobile >
 						<div className="NotebookList">
-							<NotebookList title='Notebooks'> </NotebookList>
+						<NotebookList title='Notebooks'> </NotebookList>
 						</div>
 					</Column>
 					<Column isSize="narrow" isMobile >
 						<div className="EntriesList">
-							<EntryList title='Entries'> </EntryList>
+						<EntryList title='Entries'> </EntryList>
 						</div>
 					</Column>
 					<Column >
-		{/*
-			<RichTextEditor ></RichTextEditor>
-		*/}
-			<QuillEditor></QuillEditor>
+					{/*
+						<RichTextEditor ></RichTextEditor>
+						*/}
+						<QuillEditor></QuillEditor>
 					</Column>
 				</Columns>
-			</div>
-		</Box>
+			</Container>
+		</div>
   );
 }
 
