@@ -43,7 +43,9 @@ function rootReducer(state = initialState, action) {
 			return {
 				...state,
 				selectedNotebook: action.payload,
-				currentEntries: new_entries
+				currentEntries: new_entries,
+				selectedEntry: 0,
+				entryText: new_entries[0].text
 			};
 		case 'CHANGE_ENTRY':
 			console.log(action);
