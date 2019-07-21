@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css';
-import { Menu, MenuLabel, MenuList, MenuLink } from 'bloomer';
+import { Button, Menu, MenuLabel, MenuList, MenuLink } from 'bloomer';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state){
@@ -27,16 +27,17 @@ class EntryList extends React.Component{
 			<Menu>
 				<MenuLabel>{this.props.title}</MenuLabel>
 					<MenuList>
+					<Button isFullWidth>+</Button>
 					{ 
 						elements.map((value,index) => {
 						if ( index===selectedEntry ){	
 							return <li><MenuLink isActive>
-								{value.title}<br/><span class="is-size-7 has-text-grey-lighter">{value.date}</span>
+								{value.title}<br/><span className="is-size-7 has-text-grey-lighter">{value.date}</span>
 								</MenuLink></li>
 						}else{
 							return <li><MenuLink
 							 	onClick={() => this.changeEntry(index)}
-								> {value.title}<br/><span class="is-size-7 has-text-grey-lighter">{value.date}</span>
+								> {value.title}<br/><span className="is-size-7 has-text-grey-lighter">{value.date}</span>
 								</MenuLink></li>
 							};
 						})
