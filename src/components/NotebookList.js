@@ -60,7 +60,7 @@ class NotebookList extends React.Component{
 						</MenuList>
 				</Menu>
 				<Modal isActive={showNewNotebookModal}>
-					<ModalBackground />
+					<ModalBackground onClick={this.closeNewNotebookModal} />
 					<ModalCard>
 							<ModalCardHeader>
 									<ModalCardTitle>New Notebook</ModalCardTitle>
