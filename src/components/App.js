@@ -17,11 +17,15 @@ import '../photonkit/css/photon.min.css';
 //var notebooks = require( '../data.json' )
 
 function App() {
+	let drag_style={
+		"-webkit-app-region": "drag" 
+	};
+
   return (
 		<div className="App">
 			<div className="window">
-				<header className="toolbar toolbar-header">
-					<h1 className="title">DatNotebook</h1>
+				<header className="toolbar toolbar-header" style={drag_style}>
+					<h1 className="title"  >DatNotebook</h1>
 					<Toolbar></Toolbar>
 				</header>
 
