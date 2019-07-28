@@ -46,7 +46,7 @@ class PhotonNotebookList extends React.Component{
 						if (index === selectedNotebook){
 						return (
 						<span class="nav-group-item active">
-							<span class="icon icon-folder"></span>
+							<span class="icon icon-book"></span>
 							{ value.title }
 						</span>)
 						}else{

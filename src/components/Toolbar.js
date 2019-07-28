@@ -21,12 +21,15 @@ class Toolbar extends React.Component{
 		<div className="toolbar-actions">
 			<div className="btn-group pull-left">
 
-				<div className="btn btn-default">
+				<div className="btn btn-large btn-default">
 					<span className="icon icon-book"></span>
 				</div>
 
 
 			</div>
+				<div className="btn btn-large btn-default pull-right">
+					<span className="icon icon-menu"></span>
+				</div>
 		</div>
 	)
 
